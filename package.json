@@ -1,0 +1,22 @@
+{
+  "name": "gtsa_njs",
+  "version": "1.0.0",
+  "description": "monitoring system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zapoVape/gtsa_njs.git"
+  },
+  "keywords": [
+    "gtsa"
+  ],
+  "author": "Lan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zapoVape/gtsa_njs/issues"
+  },
+  "homepage": "https://github.com/zapoVape/gtsa_njs#readme"
+}
