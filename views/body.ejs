@@ -1,0 +1,132 @@
+<%- include('partials/header') %>
+
+<nav class="navbar navbar-dark bg-secondary">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button> -->
+      <a class="navbar-brand" href="#">GCash & Savings Account Monitoring System</a>
+    </div>
+    <!-- <div class="list-group">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Age</a></li>
+        <li><a href="#">Gender</a></li>
+        <li><a href="#">xyz</a></li>
+      </ul>
+    </div> -->
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Menu</h2>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active">
+          Dashboard
+        </a>
+        <a href="/newtransaction" class="list-group-item list-group-item-action">New Transaction
+        </a>
+        <a href="#" class="list-group-item list-group-item-action disabled">About
+        </a>
+      </div>
+    </div>
+    <br>
+
+    <div class="col-sm-9">
+      <div class="card border-dark mb-3">
+        <div class="card-body">
+          <h4 class="card-title">Dashboard</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">GCash Balance</div>
+            <div class="card-body">
+              <p class="card-text">
+                <% gCashBal.forEach((item) => { %>
+                <%= item.balance%>
+                <% }) %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card border-info mb-3" style="max-width: 20rem;">
+            <div class="card-header">Pages</div>
+            <div class="card-body">
+              <p class="card-text">100 Million</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card border-info mb-3" style="max-width: 20rem;">
+            <div class="card-header">Sessions</div>
+            <div class="card-body">
+              <p class="card-text">10 Million</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card border-info mb-3" style="max-width: 20rem;">
+            <div class="card-header">Bounce</div>
+            <div class="card-body">
+              <p class="card-text">30%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card border-dark mb-3" style="max-width: 20rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h4 class="card-title">Dark card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card border-dark mb-3" style="max-width: 20rem;">
+            <div class="card-body">
+              <h4 class="card-title">Dark card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card border-dark mb-3" style="max-width: 20rem;">
+            <div class="card-body">
+              <h4 class="card-title">Dark card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="card border-dark mb-3">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card border-dark mb-3">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
