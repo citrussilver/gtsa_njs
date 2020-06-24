@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+
+<div class="row">
+  <div class="col-12">
+    <div class="card border-dark mb-3">
+      <div class="card-body">
+        <h4 class="card-title">Savings Account Transactions</h4>
+        <table class="table table-striped table-dark table-hover">
+          <thead>
+            <tr class="table-success">
+              <th scope="col">Date</th>
+              <th scope="col">Transact type</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Balance</th>
+              <th scope="col">Remarks</th>
+              <th scope="col">Post Balance</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% recRows.forEach((rec) => { %>
+              <tr>
+                <th scope="row"> <%= rec.date_time %></th>
+                <td><%= rec.transact_type %></td>
+                <td><%= rec.amount %></td>
+                <td><%= rec.current_balance %></td>
+                <td><%= rec.remarks %></td>
+                <td><%= rec.post_transact_balance %></td>
+                <td><%= rec.location %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
