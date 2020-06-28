@@ -1,5 +1,6 @@
 <%- include('partials/header') %>
 
+<div class="col-sm-9">
 <div class="row">
   <div class="col-12">
     <div class="card border-dark mb-3">
@@ -19,15 +20,15 @@
           </thead>
           <tbody>
             <% recRows.forEach((rec) => { %>
-              <tr>
-                <th scope="row"> <%= rec.date_time %></th>
-                <td><%= rec.transact_type %></td>
-                <td><%= rec.amount %></td>
-                <td><%= rec.current_balance %></td>
-                <td><%= rec.remarks %></td>
-                <td><%= rec.post_transact_balance %></td>
-                <td><%= rec.location %></td>
-              </tr>
+            <tr>
+              <th scope="row"> <%= rec.date_time %></th>
+              <td><%= rec.transact_type %></td>
+              <td><%= rec.amount %></td>
+              <td><%= rec.current_balance %></td>
+              <td><%= rec.remarks %></td>
+              <td><%= rec.post_transact_balance %></td>
+              <td><%= rec.location %></td>
+            </tr>
             <% }) %>
           </tbody>
         </table>
@@ -35,5 +36,5 @@
     </div>
   </div>
 </div>
-
+</div>
 <%- include('partials/footer') %>
