@@ -489,7 +489,30 @@ app.post('/new_gt_rec', (req, res) => {
             });
           });//INSERT INTO gcash_cash_in
         }); //INSERT gcash_send_to_bank
-      } //Number(transactType) === 6
+      } else if (Number(transactType) === 7) {
+        const glp_data = {
+          gcash_transact_id: results.insertId,
+          date_time: dateTime,
+          amount: amount,
+          remarks: remarks
+        };
+
+        dbConnection.query('INSERT INTO gcash_lazada_payment SET ?', glp_data, function(error, results) {
+          if (error) {
+            return dbConnection.rollback(function() {
+              throw error;
+            });
+          }
+          dbConnection.commit(function(err) {
+            if (err) {
+              return dbConnection.rollback(function() {
+                throw err;
+              });
+            }
+            console.log('New GCash Lazada payment successfully posted to database.');
+          });
+        });
+      } //Number(transactType) === 7
       res.redirect('/new_gt_rec');
     }); //INSERT INTO gcash_transactions
   }); //dbConnection.beginTransaction()

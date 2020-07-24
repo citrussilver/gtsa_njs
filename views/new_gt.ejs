@@ -9,10 +9,10 @@
           <div class="card-body">
             <div class="form-group">
               <label class="col-form-label" for="dateTimeFld">Date</label>
-              <input type="datetime-local" class="form-control" name="dateTimeFld" id="dateTimeFld">
+              <input type="datetime-local" class="form-control" name="dateTimeFld" id="dateTimeFld" required>
             </div>
             <div class="form-group">
-              <select class="custom-select" name="transactTypeDrp" id="transactTypeDrp">
+              <select class="custom-select" name="transactTypeDrp" id="transactTypeDrp" required>
                 <option selected="">Transaction Type</option>
                 <option value="1">Buy Load</option>
                 <option value="2">Cash-In</option>
@@ -20,6 +20,7 @@
                 <option value="4">Income / Sale</option>
                 <option value="5">Self Buy Load</option>
                 <option value="6">Send to Bank</option>
+                <option value="7">Lazada payment</option>
               </select>
             </div>
             <div class="form-group">
