@@ -102,7 +102,7 @@ app.post('/new_bt_rec', (req, res) => {
                 throw err;
               });
             }
-            alertNotif = 'New Cash deposit successfully posted to database.';
+            alertNotif = 'New Cash Deposit successfully posted to database.';
             console.log(alertNotif);
           });
         });
@@ -125,7 +125,7 @@ app.post('/new_bt_rec', (req, res) => {
                 throw err;
               });
             }
-            alertNotif = 'New Cash withdrawal successfully posted to database.';
+            alertNotif = 'New Cash Withdrawal successfully posted to database.';
             console.log(alertNotif);
           });
         });
@@ -149,7 +149,7 @@ app.post('/new_bt_rec', (req, res) => {
                 throw err;
               });
             }
-            alertNotif = 'New Bills payment successfully posted to database.';
+            alertNotif = 'New Bills Payment successfully posted to database.';
             console.log(alertNotif);
           });
         });
@@ -264,7 +264,7 @@ app.post('/new_bt_rec', (req, res) => {
                 throw err;
               });
             }
-            alertNotif = 'New bank adjustment successfully posted to database.';
+            alertNotif = 'New Bank Adjustment successfully posted to database.';
             console.log(alertNotif);
           });
         });
@@ -518,6 +518,6 @@ app.post('/new_gt_rec', (req, res) => {
   }); //dbConnection.beginTransaction()
 }); //app.post()
 
-app.listen(3000, function() {
-  console.log('Server started on port 3000.');
+app.listen(7000, function() {
+  console.log('Server started on port 7000.');
 });
